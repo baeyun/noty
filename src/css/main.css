@@ -11,16 +11,8 @@
 	src: url("../fonts/Nunito/Nunito-Bold.ttf");
 }
 @font-face {
-	font-family: "Cinzel";
-	src: url("../fonts/Cinzel/Cinzel-Regular.ttf");
-}
-@font-face {
 	font-family: "Pacifico";
 	src: url("../fonts/Pacifico/Pacifico-Regular.ttf");
-}
-@font-face {
-	font-family: "Satisfy";
-	src: url("../fonts/Satisfy/Satisfy-Regular.ttf");
 }
 
 * {
