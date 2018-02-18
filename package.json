@@ -1,0 +1,33 @@
+{
+  "name": "noty",
+  "version": "1.0.0",
+  "description": "A simple note-taking app built with ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build",
+    "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot --port 3000"
+  },
+  "author": "bukharim96",
+  "license": "MIT",
+  "dependencies": {
+    "bonjour": "^3.5.0",
+    "gsap": "^1.20.3",
+    "npm-registry": "^0.1.13",
+    "quill": "^1.3.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "socketio": "^1.0.0",
+    "xel": "0.0.103"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}

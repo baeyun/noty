@@ -1,0 +1,157 @@
+/*
+ * @todo add scss
+ * @todo fix && add font
+ */
+@font-face {
+	font-family: "Nunito Regular";
+	src: url("../fonts/Nunito/Nunito-Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito Bold";
+	src: url("../fonts/Nunito/Nunito-Bold.ttf");
+}
+@font-face {
+	font-family: "Cinzel";
+	src: url("../fonts/Cinzel/Cinzel-Regular.ttf");
+}
+@font-face {
+	font-family: "Pacifico";
+	src: url("../fonts/Pacifico/Pacifico-Regular.ttf");
+}
+@font-face {
+	font-family: "Satisfy";
+	src: url("../fonts/Satisfy/Satisfy-Regular.ttf");
+}
+
+* {
+	tap-highlight-color: transparent;
+	user-select: none;
+}
+*::selection {
+	background: #fff6f9;
+}
+body {
+	/*font-family: "Nunito Regular";*/
+	background-color: #fff6f9;
+	background-attachment: fixed;
+	/*background-repeat: no-repeat;*/
+	background-position: center center;
+	font-family: "Nunito Regular", "Calibri", sans-serif;
+}
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: "Nunito Bold";
+}
+button:focus, input:focus, textarea:focus {
+    box-shadow: 0 0 1px 5px rgba(255, 229, 238, .5) !important;
+    border-color: rgba(255, 229, 238, 1) !important;
+}
+
+#noty #selection-indicator {
+	background-color: red !important;
+}
+#noty .header {
+	margin-bottom: 25px;
+}
+#noty .header.header-suttle {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 15px;
+	color: #777;
+	text-align: center;
+}
+#noty .header.header-suttle:before, #noty .header.header-suttle:after {
+    content: " ― ";
+}
+/*
+ * never use these *[id*="note-"] for general/many elements of the same kind. That's why CSS classes exist!
+ * say u hv a nav anchor... with id = nav-logo... then it is useful
+*/
+#noty .note-item {
+	cursor: pointer;
+	box-shadow: 0 0 4px 0px rgba(0,0,0,0.15);
+	border: none;
+}
+#noty .note-item:hover {
+	background: #fff;
+}
+#noty .note-item .title {
+	width: 85%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#noty .note-item .body {
+	max-height: 25vh;
+	overflow: hidden;
+}
+#noty .note-item[edit="true"] {
+	background-color: #fff;
+}
+#noty .note-item[edit="true"] .title {
+	padding: 12px 20px;
+	margin: -12px 0 0 -20px !important;
+	width: 91%;
+	text-overflow: unset;
+	white-space: unset;
+	overflow: unset;
+}
+#noty .note-item[edit="true"] .body {
+	margin: 0 -20px;
+	padding: 10px 20px;
+	min-height: 200px;
+	max-height: 50vh;
+	overflow-y: auto;
+	border-top: 1px solid #ddd;
+}
+#noty .note-item .actions {
+	opacity: 0;
+	margin-top: -2.5px;
+	transition: opacity .1s;
+}
+#noty .note-item:hover .actions, #noty .note-item[edit="true"] .actions {
+	opacity: 1;
+}
+#noty .note-item .actions > i {
+	font-size: 20px;
+}
+#noty .note-item .actions > i + i {
+    margin-left: 13px;
+}
+#noty .note-item .actions i.edit-note {
+	color: #0275d8;
+}
+#noty .note-item .actions i.delete-note {
+	color: #dc3545;
+}
+footer {
+	font-family: "Pacifico";
+	color: #444;
+}
+footer {
+	width: 100%;
+	text-align: center;
+	margin: 40px 0 30px;
+	/*padding: 20px 0;*/
+	/*position: absolute;*/
+	/*bottom: 0;*/
+}
+/* Bootstrap overrides */
+.card {
+	display: block;
+}
+.btn {
+	text-transform: uppercase;
+}
+.btn, .form-control {
+	border-radius: 2px;
+}
+.badge {
+	background-color: #ddd;
+	color: #333;
+}
+.list-group-item:hover {
+  color: #212529;
+  background-color: #f1f1f1;
+  border-color: #dae0e5;
+}
